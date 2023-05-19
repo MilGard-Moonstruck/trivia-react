@@ -1,4 +1,4 @@
-export default ({ categories }) => {
+export default ({ categories, handlePickCategory }) => {
   return (
     <div className="category-wrapper">
       { 
@@ -6,6 +6,7 @@ export default ({ categories }) => {
           <button 
             className="category-button"
             key={category}
+            onClick={() => handlePickCategory(category)}
           >
             {category}
           </button>
